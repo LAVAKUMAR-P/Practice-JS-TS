@@ -47,3 +47,17 @@ multiType = 10;
 console.log(multiType);
 multiType = "10";
 console.log(multiType);
+
+// Functions in typescript
+console.log(`--Functions in typescript--\n\n`);
+
+function addNum(num1:number, num2?:number):number{
+    if(num1 && num2){
+        return num1+num2;
+    }else{
+        return num1 ? num1 : num2 ? num2 : 0;
+    }
+
+}
+
+let out1:number = addNum(1,2);

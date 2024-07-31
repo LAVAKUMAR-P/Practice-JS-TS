@@ -41,3 +41,14 @@ multiType = 10;
 console.log(multiType);
 multiType = "10";
 console.log(multiType);
+// Functions in typescript
+console.log("--Functions in typescript--\n\n");
+function addNum(num1, num2) {
+    if (num1 && num2) {
+        return num1 + num2;
+    }
+    else {
+        return num1 ? num1 : num2 ? num2 : 0;
+    }
+}
+var out1 = addNum(1, 2);
