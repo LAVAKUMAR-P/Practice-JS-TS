@@ -43,12 +43,18 @@ multiType = "10";
 console.log(multiType);
 // Functions in typescript
 console.log("--Functions in typescript--\n\n");
-function addNum(num1, num2) {
-    if (num1 && num2) {
-        return num1 + num2;
+function addNum(num1, num2, num3) {
+    if (num3 === void 0) { num3 = 18; }
+    if (num1 && num2 && num3) {
+        return num1 + num2 + num3;
     }
     else {
         return num1 ? num1 : num2 ? num2 : 0;
     }
 }
 var out1 = addNum(1, 2);
+// InterFace in typescript
+console.log("--InterFace in typescript--\n\n");
+var PrintName = function (person) {
+    console.log("".concat(person.firstName, " ").concat(person.lastname));
+};

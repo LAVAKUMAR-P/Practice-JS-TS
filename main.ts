@@ -51,9 +51,9 @@ console.log(multiType);
 // Functions in typescript
 console.log(`--Functions in typescript--\n\n`);
 
-function addNum(num1:number, num2?:number):number{
-    if(num1 && num2){
-        return num1+num2;
+function addNum(num1:number, num2?:number, num3:number = 18):number{
+    if(num1 && num2 && num3){
+        return num1+ num2 + num3;
     }else{
         return num1 ? num1 : num2 ? num2 : 0;
     }
@@ -61,3 +61,16 @@ function addNum(num1:number, num2?:number):number{
 }
 
 let out1:number = addNum(1,2);
+
+// InterFace in typescript
+console.log(`--InterFace in typescript--\n\n`);
+
+interface Person{
+    firstName:string,
+    lastname:string,
+}
+
+const PrintName = (person:Person) =>{
+    console.log(`${person.firstName} ${person.lastname}`);
+}
+
