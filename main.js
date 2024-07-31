@@ -2,6 +2,7 @@ var data = "hello";
 data = "data";
 var num = 1;
 var arr = [{}];
+var arr1 = [{}];
 var valid = true;
 console.log(data);
 //null & undefied Data type 
@@ -33,3 +34,10 @@ console.log("--unknown is more disciplined. It won\u2019t let you willy-nilly pe
 var mydata = "10";
 //Before do some operation we need to tell & confirm this data type 
 mydata.toLowerCase();
+// Multi type is used to give multiple types to one variable (Union of types)
+console.log("--Multi type is used to give multiple types to one variable!(Union of types)--\n\n");
+var multiType;
+multiType = 10;
+console.log(multiType);
+multiType = "10";
+console.log(multiType);

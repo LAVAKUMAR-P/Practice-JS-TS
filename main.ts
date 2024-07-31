@@ -2,6 +2,7 @@ let data: string = "hello";
 data = `data`;
 let num: number = 1;
 let arr: Array<object> = [{}];
+let arr1: object[] = [{}]
 let valid: boolean = true;
 console.log(data);
 
@@ -38,3 +39,11 @@ console.log(`--unknown is more disciplined. It won’t let you willy-nilly perfo
 let mydata:unknown = "10";
 //Before do some operation we need to tell & confirm this data type 
 (mydata as string).toLowerCase()
+
+// Multi type is used to give multiple types to one variable (Union of types)
+console.log(`--Multi type is used to give multiple types to one variable!(Union of types)--\n\n`);
+let multiType : number|string ;
+multiType = 10;
+console.log(multiType);
+multiType = "10";
+console.log(multiType);
