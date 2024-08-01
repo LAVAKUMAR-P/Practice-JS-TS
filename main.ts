@@ -67,10 +67,38 @@ console.log(`--InterFace in typescript--\n\n`);
 
 interface Person{
     firstName:string,
-    lastname:string,
+    lastname?:string,
 }
 
 const PrintName = (person:Person) =>{
     console.log(`${person.firstName} ${person.lastname}`);
 }
 
+PrintName({firstName:'lavakumar',lastname:'P'});
+
+// Class in typescript
+console.log(`--Class in typescript--\n\n`);
+
+class EmployeeData {
+    protected employeeName:string;
+    constructor(name:string){
+     this.employeeName = name;
+    }
+
+    greet(){
+        console.log(`Welcome ${this.employeeName}`);
+    }
+}
+
+class MangerData extends EmployeeData{
+       constructor(ManagerName:string){
+         super(ManagerName);
+       }
+}
+
+let newEmp = new EmployeeData("Rajkumar");
+newEmp.greet();
+newEmp.employeeName;
+
+let newManager = new MangerData("Balaji");
+newManager.greet();

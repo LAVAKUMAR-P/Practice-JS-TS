@@ -1,3 +1,18 @@
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var data = "hello";
 data = "data";
 var num = 1;
@@ -58,3 +73,27 @@ console.log("--InterFace in typescript--\n\n");
 var PrintName = function (person) {
     console.log("".concat(person.firstName, " ").concat(person.lastname));
 };
+PrintName({ firstName: 'lavakumar', lastname: 'P' });
+// Class in typescript
+console.log("--Class in typescript--\n\n");
+var EmployeeData = /** @class */ (function () {
+    function EmployeeData(name) {
+        this.employeeName = name;
+    }
+    EmployeeData.prototype.greet = function () {
+        console.log("Welcome ".concat(this.employeeName));
+    };
+    return EmployeeData;
+}());
+var MangerData = /** @class */ (function (_super) {
+    __extends(MangerData, _super);
+    function MangerData(ManagerName) {
+        return _super.call(this, ManagerName) || this;
+    }
+    return MangerData;
+}(EmployeeData));
+var newEmp = new EmployeeData("Rajkumar");
+newEmp.greet();
+newEmp.employeeName;
+var newManager = new MangerData("Balaji");
+newManager.greet();
