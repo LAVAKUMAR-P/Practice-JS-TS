@@ -79,21 +79,36 @@ console.log("--Class in typescript--\n\n");
 var EmployeeData = /** @class */ (function () {
     function EmployeeData(name) {
         this.employeeName = name;
+        this.staticmsg = "Hi i am private msg";
     }
     EmployeeData.prototype.greet = function () {
         console.log("Welcome ".concat(this.employeeName));
     };
+    EmployeeData.prototype.getstaticmsg = function () {
+        console.log(this.staticmsg);
+    };
     return EmployeeData;
 }());
-var MangerData = /** @class */ (function (_super) {
-    __extends(MangerData, _super);
-    function MangerData(ManagerName) {
-        return _super.call(this, ManagerName) || this;
-    }
-    return MangerData;
-}(EmployeeData));
 var newEmp = new EmployeeData("Rajkumar");
 newEmp.greet();
-newEmp.employeeName;
-var newManager = new MangerData("Balaji");
+newEmp.getstaticmsg();
+//Access Modifires in Class 
+//Public - all inheritated class & user who create new & inside class have access
+//Private - Only that perticular class & member have access
+//Protected - that class & inherited class only have access
+var MangerData = /** @class */ (function (_super) {
+    __extends(MangerData, _super);
+    function MangerData(ManagerName, skill) {
+        var _this = _super.call(this, ManagerName) || this;
+        _this.skils = skill;
+        return _this;
+    }
+    MangerData.prototype.getAllskills = function () {
+        console.log(this.skils);
+    };
+    return MangerData;
+}(EmployeeData));
+var newManager = new MangerData("Balaji", ["javascript", "Typescript"]);
 newManager.greet();
+newManager.getAllskills();
+newManager.getstaticmsg();

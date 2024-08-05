@@ -80,25 +80,46 @@ PrintName({firstName:'lavakumar',lastname:'P'});
 console.log(`--Class in typescript--\n\n`);
 
 class EmployeeData {
-    protected employeeName:string;
+    employeeName:string;
+    private staticmsg:string;
     constructor(name:string){
      this.employeeName = name;
+     this.staticmsg = "Hi i am private msg"
     }
 
     greet(){
         console.log(`Welcome ${this.employeeName}`);
     }
+
+    getstaticmsg (){
+        console.log(this.staticmsg);
+    }
 }
 
-class MangerData extends EmployeeData{
-       constructor(ManagerName:string){
-         super(ManagerName);
-       }
-}
+
 
 let newEmp = new EmployeeData("Rajkumar");
 newEmp.greet();
-newEmp.employeeName;
+newEmp.getstaticmsg();
 
-let newManager = new MangerData("Balaji");
+
+//Access Modifires in Class 
+//Public - all inheritated class & user who create new & inside class have access
+//Private - Only that perticular class & member have access
+//Protected - that class & inherited class only have access
+
+class MangerData extends EmployeeData{
+    skils:string[];
+    constructor(ManagerName:string, skill:string[]){
+      super(ManagerName);
+      this.skils = skill;
+    }
+    getAllskills (){
+        console.log(this.skils);
+    }
+} 
+
+let newManager = new MangerData("Balaji",["javascript","Typescript"]);
 newManager.greet();
+newManager.getAllskills();
+newManager.getstaticmsg();
