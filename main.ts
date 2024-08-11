@@ -10,6 +10,11 @@ console.log(data);
 let n:null = null;
 let u:undefined = undefined;
 
+//Type Aliases: You can create custom types using the type keyword. 
+console.log("Type Aliases: You can create custom types using the type keyword.");
+type ID = string | number;
+let userId: ID = 123;
+console.log(userId);
 //Array 
 let list1 : number[]= [1,2,3,4,5];
 let list2 : Array<Number>=[1,2,3,4,5];
