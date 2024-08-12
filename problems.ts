@@ -9,3 +9,17 @@ const addTwoNumbers = (num1:number,num2:number):number|string =>{
 }
 
 console.log(addTwoNumbers(1,2))
+
+//Write a JavaScript program to find the maximum number in an array. 
+
+const findMaxNumfromarray = (data:Array<number>):number|string =>{
+    try {
+        let num:number = Math.max(...data);
+        return num
+    } catch (error) {
+        console.log(error);
+        throw new Error("something went wrong")
+    }
+}
+
+console.log(findMaxNumfromarray([1,2,3,4,5]))
