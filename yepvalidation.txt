@@ -44,3 +44,34 @@ const objectSchema = Yup.object().shape({
   age: Yup.number().required('Age is required').positive().integer(),
   email: Yup.string().email('Invalid email address').required('Email is required'),
 });
+
+7. Mixed (Custom Validation)
+const mixedSchema = Yup.mixed()
+  .required('This field is required')
+  .test('is-json', 'Must be a valid JSON', value => {
+    try {
+      JSON.parse(value);
+      return true;
+    } catch (e) {
+      return false;
+    }
+  });
+
+8. Nested Objects
+const nestedObjectSchema = Yup.object().shape({
+  user: Yup.object().shape({
+    name: Yup.string().required('Name is required'),
+    age: Yup.number().required('Age is required').positive().integer(),
+  }),
+});
+
+9. Conditional Validation
+const conditionalSchema = Yup.object().shape({
+  isCompany: Yup.boolean(),
+  companyName: Yup.string().when('isCompany', {
+    is: true,
+    then: Yup.string().required('Company name is required'),
+    otherwise: Yup.string(),
+  }),
+});
+
