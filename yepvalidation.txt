@@ -1,0 +1,46 @@
+yep validations for different Data type 
+
+1. String
+import * as Yup from 'yup';
+
+const stringSchema = Yup.string()
+  .required('This field is required')
+  .min(2, 'Must be at least 2 characters')
+  .max(50, 'Must be 50 characters or less')
+  .email('Must be a valid email')
+  .url('Must be a valid URL');
+
+2. Number
+
+const numberSchema = Yup.number()
+  .required('This field is required')
+  .positive('Must be a positive number')
+  .integer('Must be an integer')
+  .min(1, 'Must be at least 1')
+  .max(100, 'Must be 100 or less');
+
+
+3. Boolean
+   const booleanSchema = Yup.boolean()
+  .required('This field is required')
+  .oneOf([true], 'You must accept the terms and conditions');
+
+4. Date
+const dateSchema = Yup.date()
+  .required('This field is required')
+  .min(new Date(1900, 0, 1), 'Date must be after January 1, 1900')
+  .max(new Date(), 'Date cannot be in the future');
+
+5. Array
+const arraySchema = Yup.array()
+  .of(Yup.string().required('Each item must be a string'))
+  .min(1, 'Must have at least one item')
+  .max(5, 'Cannot have more than 5 items');
+
+6. Object
+
+const objectSchema = Yup.object().shape({
+  name: Yup.string().required('Name is required'),
+  age: Yup.number().required('Age is required').positive().integer(),
+  email: Yup.string().email('Invalid email address').required('Email is required'),
+});
