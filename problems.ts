@@ -30,3 +30,13 @@ const reverseanString = (data:string) : string =>{
 }
 
 console.log(reverseanString("test"));
+
+//function to find factorial 
+const factorial = (num:number):string =>{
+    let num2:number = 1;
+    for(let i = 1; i<=num ; i++){
+        num2 = num2 * i;
+    }
+    return `${num}! = ${num2}`
+}
+console.log(factorial(5));

@@ -26,3 +26,12 @@ var reverseanString = function (data) {
     return data.split("").reverse().join("");
 };
 console.log(reverseanString("test"));
+//function to find factorial 
+var factorial = function (num) {
+    var num2 = 1;
+    for (var i = 1; i <= num; i++) {
+        num2 = num2 * i;
+    }
+    return "".concat(num, "! = ").concat(num2);
+};
+console.log(factorial(5));
