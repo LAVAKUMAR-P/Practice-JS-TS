@@ -23,3 +23,10 @@ const findMaxNumfromarray = (data:Array<number>):number|string =>{
 }
 
 console.log(findMaxNumfromarray([1,2,3,4,5]))
+
+//Function to reverse an string 
+const reverseanString = (data:string) : string =>{
+  return data.split("").reverse().join("")
+}
+
+console.log(reverseanString("test"));

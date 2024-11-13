@@ -21,3 +21,8 @@ var findMaxNumfromarray = function (data) {
     }
 };
 console.log(findMaxNumfromarray([1, 2, 3, 4, 5]));
+//Function to reverse an string 
+var reverseanString = function (data) {
+    return data.split("").reverse().join("");
+};
+console.log(reverseanString("test"));
