@@ -36,5 +36,42 @@ if (!Array.prototype.myfilter) {
     };
   }
 
-  console.log(data.filter((num,inx)=> data.indexOf(num) !== inx))
-  console.log(data.myfilter((num,inx)=> data.indexOf(num) !== inx))
+  // console.log(data.filter((num,inx)=> data.indexOf(num) !== inx))
+  // console.log(data.myfilter((num,inx)=> data.indexOf(num) !== inx))
+
+
+//Find Prime number
+
+const primeOrNot = (number =1)=>{
+  let isPrime = true;
+
+
+if (number === 1) {
+    console.log("1 is neither prime nor composite number.");
+}
+
+// check if number is greater than 1
+else if (number > 1) {
+
+    // looping through 2 to number/2
+    for (let i = 2; i <= number/2; i++) {
+        if (number % i == 0) {
+            isPrime = false;
+            break;
+        }
+    }
+
+    if (isPrime) {
+        console.log(`${number} is a prime number`);
+    } else {
+        console.log(`${number} is a not prime number`);
+    }
+}
+
+else {
+    console.log("The number is not a prime number.");
+}
+
+}
+
+primeOrNot(2)
