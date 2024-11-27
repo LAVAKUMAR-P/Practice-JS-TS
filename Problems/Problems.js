@@ -42,36 +42,17 @@ if (!Array.prototype.myfilter) {
 
 //Find Prime number
 
-const primeOrNot = (number =1)=>{
-  let isPrime = true;
-
-
-if (number === 1) {
-    console.log("1 is neither prime nor composite number.");
-}
-
-// check if number is greater than 1
-else if (number > 1) {
-
-    // looping through 2 to number/2
-    for (let i = 2; i <= number/2; i++) {
-        if (number % i == 0) {
-            isPrime = false;
-            break;
-        }
+const checkPrimeorNot = (num )=>{
+  if(num === 1){
+    return "Number is Nor composite or Prime"
+  }else{
+    for(let i =2 ; i<= num/2; i++){
+       if(num%i === 0){
+        return "Number is not an prime number"
+       }
     }
-
-    if (isPrime) {
-        console.log(`${number} is a prime number`);
-    } else {
-        console.log(`${number} is a not prime number`);
-    }
+  }
+  return 'number is prime number'
 }
 
-else {
-    console.log("The number is not a prime number.");
-}
-
-}
-
-primeOrNot(2)
+console.log(checkPrimeorNot(4))
