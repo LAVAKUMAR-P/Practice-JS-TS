@@ -55,4 +55,34 @@ const checkPrimeorNot = (num )=>{
   return 'number is prime number'
 }
 
-console.log(checkPrimeorNot(4))
+// console.log(checkPrimeorNot(4))
+
+
+
+//Eg : own version of map (Polyfill)
+
+Array.prototype.myMap = function(callback){
+  let array = [];
+  for (let index = 0; index < this.length; index++) {
+    array.push(callback(this[index],index,this))
+  }
+  return array
+}
+
+// console.log([1,2,3].myMap((data)=> data*2))
+// console.log([1,2,3].map((data)=> data*2))
+
+//Eg : own version of filter (Polyfill)
+
+Array.prototype.myFilter = function(callback){
+  let array = [];
+  for (let index = 0; index < this.length; index++) {
+    if(callback(this[index],index,this)){
+      array.push(this[index])
+    }    
+  }
+  return array
+}
+
+console.log([1,2,3].filter(num => num % 2 === 0))
+console.log([1,2,3].myFilter(num => num % 2 === 0))
