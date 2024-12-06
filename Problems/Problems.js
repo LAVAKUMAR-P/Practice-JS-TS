@@ -84,5 +84,18 @@ Array.prototype.myFilter = function(callback){
   return array
 }
 
-console.log([1,2,3].filter(num => num % 2 === 0))
-console.log([1,2,3].myFilter(num => num % 2 === 0))
+// console.log([1,2,3].filter(num => num % 2 === 0))
+// console.log([1,2,3].myFilter(num => num % 2 === 0))
+
+//Function to reverse string without using in build methord
+const reverseString = (str="") =>{
+  let newarr = str.split("");
+  let newStr = ""
+  for(let i = newarr.length-1; i >= 0; i--){
+      newStr = newStr+newarr[i]
+  }
+  
+  return newStr
+}
+
+console.log(reverseString("lava"))
