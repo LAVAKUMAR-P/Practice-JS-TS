@@ -98,4 +98,5 @@ const reverseString = (str="") =>{
   return newStr
 }
 
-console.log(reverseString("lava"))
+console.log(reverseString("lava"));
+console.log("lava".split("").reverse().join(""))
