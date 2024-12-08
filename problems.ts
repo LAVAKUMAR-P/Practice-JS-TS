@@ -40,3 +40,39 @@ const factorial = (num:number):string =>{
     return `${num}! = ${num2}`
 }
 console.log(factorial(5));
+
+
+const findPrimeNumber = (num:number) : string=>{
+    try {
+        if(num <=1){
+        return "It is not or nor an prime or composite number"
+        }
+
+        for(let i:number = 2 ; i <= num/2 ; i++ ){
+           if(num%num === 0){
+            return "Not an prime number"
+           }
+        }
+        return 'it is Prime number'
+    } catch (error) {
+        console.log(error);
+        return 'Something went wrong' 
+    }
+}
+
+console.log(findPrimeNumber(17));
+
+//call & apply
+type objs = {
+    name:string,
+    sayhi: (data?:string|string[])=>void
+}
+const nameobj : objs = {
+   name:"Lavakumar P",
+   sayhi: function (data?:string|string[]){
+    console.log(`Hi ${this.name} & ${data && data}`)
+   }
+}
+
+console.log(nameobj.sayhi.call({name:"Balaji"}, "jack"))
+console.log(nameobj.sayhi.call({name:"Lavakumar"}, ["jack"]))

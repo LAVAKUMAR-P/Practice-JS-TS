@@ -35,3 +35,29 @@ var factorial = function (num) {
     return "".concat(num, "! = ").concat(num2);
 };
 console.log(factorial(5));
+var findPrimeNumber = function (num) {
+    try {
+        if (num <= 1) {
+            return "It is not or nor an prime or composite number";
+        }
+        for (var i = 2; i <= num / 2; i++) {
+            if (num % num === 0) {
+                return "Not an prime number";
+            }
+        }
+        return 'it is Prime number';
+    }
+    catch (error) {
+        console.log(error);
+        return 'Something went wrong';
+    }
+};
+console.log(findPrimeNumber(17));
+var nameobj = {
+    name: "Lavakumar P",
+    sayhi: function (data) {
+        console.log("Hi ".concat(this.name, " & ").concat(data && data));
+    }
+};
+console.log(nameobj.sayhi.call({ name: "Balaji" }, "jack"));
+console.log(nameobj.sayhi.call({ name: "Lavakumar" }, ["jack"]));
