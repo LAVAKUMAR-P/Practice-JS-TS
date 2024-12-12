@@ -14,3 +14,17 @@ const result = isPrime(workerData.number);
 
 // Send the result back to the main file
 parentPort.postMessage(result);
+
+//---------------------------------------------------------------------------------------------------
+
+
+
+
+// Wait for the number from the main file
+process.on('message', (number) => {
+    const result = isPrime(number);
+
+    // Send the result back to the main file
+    process.send(result);
+});
+
