@@ -8,7 +8,7 @@ const addTwoNumbers = (num1:number,num2:number):number|string =>{
     }
 }
 
-console.log(addTwoNumbers(1,2))
+// console.log(addTwoNumbers(1,2))
 
 //Write a JavaScript program to find the maximum number in an array. 
 
@@ -22,14 +22,14 @@ const findMaxNumfromarray = (data:Array<number>):number|string =>{
     }
 }
 
-console.log(findMaxNumfromarray([1,2,3,4,5]))
+// console.log(findMaxNumfromarray([1,2,3,4,5]))
 
 //Function to reverse an string 
 const reverseanString = (data:string) : string =>{
   return data.split("").reverse().join("")
 }
 
-console.log(reverseanString("test"));
+// console.log(reverseanString("test"));
 
 //function to find factorial 
 const factorial = (num:number):string =>{
@@ -39,7 +39,7 @@ const factorial = (num:number):string =>{
     }
     return `${num}! = ${num2}`
 }
-console.log(factorial(5));
+// console.log(factorial(5));
 
 
 const findPrimeNumber = (num:number) : string=>{
@@ -60,7 +60,7 @@ const findPrimeNumber = (num:number) : string=>{
     }
 }
 
-console.log(findPrimeNumber(17));
+// console.log(findPrimeNumber(17));
 
 //call & apply
 type objs = {
@@ -74,8 +74,8 @@ const nameobj : objs = {
    }
 }
 
-console.log(nameobj.sayhi.call({name:"Balaji"}, "jack"))
-console.log(nameobj.sayhi.call({name:"Lavakumar"}, ["jack"]));
+// console.log(nameobj.sayhi.call({name:"Balaji"}, "jack"))
+// console.log(nameobj.sayhi.call({name:"Lavakumar"}, ["jack"]));
 
 // check whether a string is palindrome or not
 

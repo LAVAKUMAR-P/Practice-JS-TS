@@ -8,7 +8,7 @@ var addTwoNumbers = function (num1, num2) {
         return "something went wrong";
     }
 };
-console.log(addTwoNumbers(1, 2));
+// console.log(addTwoNumbers(1,2))
 //Write a JavaScript program to find the maximum number in an array. 
 var findMaxNumfromarray = function (data) {
     try {
@@ -20,12 +20,12 @@ var findMaxNumfromarray = function (data) {
         throw new Error("something went wrong");
     }
 };
-console.log(findMaxNumfromarray([1, 2, 3, 4, 5]));
+// console.log(findMaxNumfromarray([1,2,3,4,5]))
 //Function to reverse an string 
 var reverseanString = function (data) {
     return data.split("").reverse().join("");
 };
-console.log(reverseanString("test"));
+// console.log(reverseanString("test"));
 //function to find factorial 
 var factorial = function (num) {
     var num2 = 1;
@@ -34,7 +34,7 @@ var factorial = function (num) {
     }
     return "".concat(num, "! = ").concat(num2);
 };
-console.log(factorial(5));
+// console.log(factorial(5));
 var findPrimeNumber = function (num) {
     try {
         if (num <= 1) {
@@ -52,15 +52,14 @@ var findPrimeNumber = function (num) {
         return 'Something went wrong';
     }
 };
-console.log(findPrimeNumber(17));
 var nameobj = {
     name: "Lavakumar P",
     sayhi: function (data) {
         console.log("Hi ".concat(this.name, " & ").concat(data && data));
     }
 };
-console.log(nameobj.sayhi.call({ name: "Balaji" }, "jack"));
-console.log(nameobj.sayhi.call({ name: "Lavakumar" }, ["jack"]));
+// console.log(nameobj.sayhi.call({name:"Balaji"}, "jack"))
+// console.log(nameobj.sayhi.call({name:"Lavakumar"}, ["jack"]));
 // check whether a string is palindrome or not
 var checkTheStringisPalindrome = function (data) {
     if (data === void 0) { data = ""; }
