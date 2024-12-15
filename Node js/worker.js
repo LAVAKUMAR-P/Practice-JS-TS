@@ -15,6 +15,8 @@ const result = isPrime(workerData.number);
 // Send the result back to the main file
 parentPort.postMessage(result);
 
+parentPort.pa
+
 //---------------------------------------------------------------------------------------------------
 
 
@@ -26,5 +28,6 @@ process.on('message', (number) => {
 
     // Send the result back to the main file
     process.send(result);
+    process.exit(0);
 });
 

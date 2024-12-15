@@ -61,3 +61,9 @@ var nameobj = {
 };
 console.log(nameobj.sayhi.call({ name: "Balaji" }, "jack"));
 console.log(nameobj.sayhi.call({ name: "Lavakumar" }, ["jack"]));
+// check whether a string is palindrome or not
+var checkTheStringisPalindrome = function (data) {
+    if (data === void 0) { data = ""; }
+    return data === data.split("").reverse().join("");
+};
+console.log(checkTheStringisPalindrome("dd"));

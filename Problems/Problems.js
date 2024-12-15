@@ -98,5 +98,15 @@ const reverseString = (str="") =>{
   return newStr
 }
 
-console.log(reverseString("lava"));
-console.log("lava".split("").reverse().join(""))
+// console.log(reverseString("lava"));
+// console.log("lava".split("").reverse().join(""))
+
+Array.prototype.myForEach = function (callback){
+  for(let i =0; i < this.length; i++){
+      callback(this[i], i , this)
+  }
+}
+
+console.log([1,2,3,4,5].myForEach((data)=>{
+  console.log(data)
+}))
