@@ -65,4 +65,10 @@ var checkTheStringisPalindrome = function (data) {
     if (data === void 0) { data = ""; }
     return data === data.split("").reverse().join("");
 };
-console.log(checkTheStringisPalindrome("dd"));
+// console.log(checkTheStringisPalindrome("dd"));
+//Reverse a given word sentance 
+var reverseGivenWordSentance = function (str) {
+    if (str === void 0) { str = ""; }
+    return str.split(" ").reverse().join(" ");
+};
+console.log(reverseGivenWordSentance("Hello there it is Lavakumar"));

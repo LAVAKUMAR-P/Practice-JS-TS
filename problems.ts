@@ -83,4 +83,13 @@ const checkTheStringisPalindrome = (data:string = ""):boolean =>{
     return  data === data.split("").reverse().join("");
 }
 
-console.log(checkTheStringisPalindrome("dd"));
+// console.log(checkTheStringisPalindrome("dd"));
+
+//Reverse a given word sentance 
+
+const reverseGivenWordSentance = (str:string=""):string =>{
+
+    return str.split(" ").reverse().join(" ");
+}
+
+console.log(reverseGivenWordSentance("Hello there it is Lavakumar"))
