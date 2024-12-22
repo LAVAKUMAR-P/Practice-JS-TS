@@ -71,4 +71,17 @@ var reverseGivenWordSentance = function (str) {
     if (str === void 0) { str = ""; }
     return str.split(" ").reverse().join(" ");
 };
-console.log(reverseGivenWordSentance("Hello there it is Lavakumar"));
+// console.log(reverseGivenWordSentance("Hello there it is Lavakumar"))
+// Program to find longest word in a given sentence 
+var findLargestWordInSentance = function (sentance) {
+    var words = sentance.split(" ");
+    var largestWord = '';
+    for (var _i = 0, words_1 = words; _i < words_1.length; _i++) {
+        var word = words_1[_i];
+        if (largestWord.length < word.length) {
+            largestWord = word;
+        }
+    }
+    return largestWord;
+};
+console.log(findLargestWordInSentance("Hello there it is Lavakumar"));

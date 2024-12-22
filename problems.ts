@@ -92,4 +92,19 @@ const reverseGivenWordSentance = (str:string=""):string =>{
     return str.split(" ").reverse().join(" ");
 }
 
-console.log(reverseGivenWordSentance("Hello there it is Lavakumar"))
+// console.log(reverseGivenWordSentance("Hello there it is Lavakumar"))
+
+
+// Program to find longest word in a given sentence 
+const findLargestWordInSentance = (sentance : string):string =>{
+   let words: string[] = sentance.split(" ");
+   let largestWord:string = '';
+   for(let word of words){
+      if(largestWord.length < word.length){
+        largestWord = word;
+      }
+   }
+   return largestWord;
+}
+
+console.log(findLargestWordInSentance("Hello there it is Lavakumar"));
