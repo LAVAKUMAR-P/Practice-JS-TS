@@ -108,3 +108,22 @@ const findLargestWordInSentance = (sentance : string):string =>{
 }
 
 console.log(findLargestWordInSentance("Hello there it is Lavakumar"));
+
+
+//Find prime number 
+
+const findPrimeNumbers = <T,>(num:number):string =>{
+    if(num === 1){
+         return "Non a prime or composite" ;
+    }
+    let prime = true;
+    for(let i=2 ; i <= Math.sqrt(num); i++){
+        if(num%i === 0){
+            prime = false;
+            break
+        }
+    }
+  return prime ? "Prime number" : "Not prime";
+}   
+
+console.log(findPrimeNumbers(3))

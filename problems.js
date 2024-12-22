@@ -85,3 +85,18 @@ var findLargestWordInSentance = function (sentance) {
     return largestWord;
 };
 console.log(findLargestWordInSentance("Hello there it is Lavakumar"));
+//Find prime number 
+var findPrimeNumbers = function (num) {
+    if (num === 1) {
+        return "Non a prime or composite";
+    }
+    var prime = true;
+    for (var i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            prime = false;
+            break;
+        }
+    }
+    return prime ? "Prime number" : "Not prime";
+};
+console.log(findPrimeNumbers(3));
