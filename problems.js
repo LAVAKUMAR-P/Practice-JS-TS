@@ -1,4 +1,4 @@
-//Add 2 numbers 
+//Add 2 numbers
 var addTwoNumbers = function (num1, num2) {
     try {
         return num1 + num2;
@@ -9,7 +9,7 @@ var addTwoNumbers = function (num1, num2) {
     }
 };
 // console.log(addTwoNumbers(1,2))
-//Write a JavaScript program to find the maximum number in an array. 
+//Write a JavaScript program to find the maximum number in an array.
 var findMaxNumfromarray = function (data) {
     try {
         var num = Math.max.apply(Math, data);
@@ -21,12 +21,12 @@ var findMaxNumfromarray = function (data) {
     }
 };
 // console.log(findMaxNumfromarray([1,2,3,4,5]))
-//Function to reverse an string 
+//Function to reverse an string
 var reverseanString = function (data) {
     return data.split("").reverse().join("");
 };
 // console.log(reverseanString("test"));
-//function to find factorial 
+//function to find factorial
 var factorial = function (num) {
     var num2 = 1;
     for (var i = 1; i <= num; i++) {
@@ -45,18 +45,18 @@ var findPrimeNumber = function (num) {
                 return "Not an prime number";
             }
         }
-        return 'it is Prime number';
+        return "it is Prime number";
     }
     catch (error) {
         console.log(error);
-        return 'Something went wrong';
+        return "Something went wrong";
     }
 };
 var nameobj = {
     name: "Lavakumar P",
     sayhi: function (data) {
         console.log("Hi ".concat(this.name, " & ").concat(data && data));
-    }
+    },
 };
 // console.log(nameobj.sayhi.call({name:"Balaji"}, "jack"))
 // console.log(nameobj.sayhi.call({name:"Lavakumar"}, ["jack"]));
@@ -66,16 +66,16 @@ var checkTheStringisPalindrome = function (data) {
     return data === data.split("").reverse().join("");
 };
 // console.log(checkTheStringisPalindrome("dd"));
-//Reverse a given word sentance 
+//Reverse a given word sentance
 var reverseGivenWordSentance = function (str) {
     if (str === void 0) { str = ""; }
     return str.split(" ").reverse().join(" ");
 };
 // console.log(reverseGivenWordSentance("Hello there it is Lavakumar"))
-// Program to find longest word in a given sentence 
+// Program to find longest word in a given sentence
 var findLargestWordInSentance = function (sentance) {
     var words = sentance.split(" ");
-    var largestWord = '';
+    var largestWord = "";
     for (var _i = 0, words_1 = words; _i < words_1.length; _i++) {
         var word = words_1[_i];
         if (largestWord.length < word.length) {
@@ -85,7 +85,7 @@ var findLargestWordInSentance = function (sentance) {
     return largestWord;
 };
 console.log(findLargestWordInSentance("Hello there it is Lavakumar"));
-//Find prime number 
+//Find prime number
 var findPrimeNumbers = function (num) {
     if (num === 1) {
         return "Non a prime or composite";
@@ -99,4 +99,17 @@ var findPrimeNumbers = function (num) {
     }
     return prime ? "Prime number" : "Not prime";
 };
-console.log(findPrimeNumbers(3));
+// console.log(findPrimeNumbers(3))
+//Write a JavaScript function that takes an array of numbers and returns a new array with only the even numbers.
+var findEvenNumbersFromAnArray = function (arr1) {
+    if (arr1 === void 0) { arr1 = []; }
+    var out = [];
+    for (var _i = 0, arr1_1 = arr1; _i < arr1_1.length; _i++) {
+        var num = arr1_1[_i];
+        if (num % 2 === 0) {
+            out.push(num);
+        }
+    }
+    return out;
+};
+console.log(findEvenNumbersFromAnArray([1, 2, 3, 4, 5, 6]));
