@@ -135,6 +135,4 @@ const findEvenNumbersFromAnArray = (arr1: number[] = []): number[] => {
   }
   return out;
 };
-
-
 console.log(findEvenNumbersFromAnArray([1,2,3,4,5,6]))
