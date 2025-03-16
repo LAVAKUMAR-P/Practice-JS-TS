@@ -135,4 +135,11 @@ const findEvenNumbersFromAnArray = (arr1: number[] = []): number[] => {
   }
   return out;
 };
-console.log(findEvenNumbersFromAnArray([1,2,3,4,5,6]))
+// console.log(findEvenNumbersFromAnArray([1,2,3,4,5,6]))
+
+// Find duplicates from an array return a duplicates that array contains 
+
+const findAndReturnDuplicates = (arr:number[]= []): number[] | [] =>{
+  return arr.filter((num : number,index:number) => { return arr.indexOf(num) !== index});
+}
+console.log(findAndReturnDuplicates([1,1,22,33,44,44,5]));
