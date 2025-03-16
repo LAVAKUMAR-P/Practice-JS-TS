@@ -112,4 +112,10 @@ var findEvenNumbersFromAnArray = function (arr1) {
     }
     return out;
 };
-console.log(findEvenNumbersFromAnArray([1, 2, 3, 4, 5, 6]));
+// console.log(findEvenNumbersFromAnArray([1,2,3,4,5,6]))
+// Find duplicates from an array return a duplicates that array contains 
+var findAndReturnDuplicates = function (arr) {
+    if (arr === void 0) { arr = []; }
+    return arr.filter(function (num, index) { return arr.indexOf(num) !== index; });
+};
+console.log(findAndReturnDuplicates([1, 1, 22, 33, 44, 44, 5]));
