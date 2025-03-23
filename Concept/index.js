@@ -72,3 +72,29 @@ delete user.age;  // Won't work
 console.log(user); // { age: 35 }
 
 
+// 🔥 How does an IIFE work?
+// An IIFE is a function wrapped in parentheses and followed by () to invoke it instantly:
+
+(function () {
+    console.log("This function runs immediately!");
+})();
+
+// Or using an arrow function:
+(() => console.log("Arrow function IIFE!"))();
+
+// Example: Private Counter
+
+const counter = (function () {
+    var count = 0;
+    return {
+        increment: () => ++count,
+        getCount: () => count
+    };
+})();
+
+console.log(counter.increment()); // 1
+console.log(counter.getCount());  // 1
+count = 11
+//Here, count remains private and cannot be modified directly from outside.
+
+
